@@ -66,11 +66,11 @@ function AddTask({ task }) {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  text: (text) => dispatch(addToDo(text))
+  task: (text) => dispatch(addToDo(text))
 });
 
 AddTask.propTypes = {
-  task: PropTypes.string.isRequired
+  task: PropTypes.func.isRequired
 };
 
 
