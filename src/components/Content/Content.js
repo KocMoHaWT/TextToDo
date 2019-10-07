@@ -44,7 +44,7 @@ function Content(props) {
       </div>
       <Tasks
         todos={search.value ? filterTasks()
-          .filter((todo) => todo.text === search.value) : filterTasks()}
+          .filter((todo) => todo.text.match(search.value)) : filterTasks()}
         handleDelete={handleDelete}
         handleToggle={handleToggle}
       />
